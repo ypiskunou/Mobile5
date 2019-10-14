@@ -1,8 +1,8 @@
 package mmf.piskunou.lab2;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +12,7 @@ public class DisplayMessageActivity extends AppCompatActivity implements View.On
 
     final static String EXTRA_ANSWER="EXTRA_ANSWER";
     EditText editAnswer;
-    TextView given_question;
+    TextView givenQuestion;
     Button btnAnswer;
 // коды состояния надо проверять. Интент - с контекстом связанного активити
     @Override
@@ -22,10 +22,10 @@ public class DisplayMessageActivity extends AppCompatActivity implements View.On
 
         Intent intent= getIntent();
         String question = intent.getStringExtra(MainActivity.EXTRA_QUESTION);
-        given_question=(TextView) findViewById(R.id.given_question);
-        given_question.setText(question);
-        editAnswer = (EditText) findViewById(R.id.editAnswer);
-        btnAnswer = (Button) findViewById(R.id.button_answer);
+        givenQuestion = findViewById(R.id.given_question);
+        givenQuestion.setText(question);
+        editAnswer = findViewById(R.id.editAnswer);
+        btnAnswer = findViewById(R.id.button_answer);
         btnAnswer.setOnClickListener(this);
     }
 
