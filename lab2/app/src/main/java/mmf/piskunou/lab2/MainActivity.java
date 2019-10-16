@@ -10,6 +10,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * Введите общие стили для элементов управления.
+ *  Добавте локализацию - приложение должно поддерживать русский и английский языки,
+ * в зависимости от настроек системы.
+ *  Добавте разметку для портретного и ландшафтного вида -
+ * которые будут применяться при повороте телефона.*/
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView answerView;

@@ -11,18 +11,18 @@
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter question "
+        android:hint="@string/hint_question"
         android:gravity="top"/>
     <TextView
         android:id="@+id/given_answer"
         android:layout_width="match_parent"
         android:layout_height="26dp"
-        android:hint="Given answer"/>
+        android:hint="@string/hint_answer_field"/>
     <Button
         android:id="@+id/button_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Отправить"
+        android:text="@string/send"
         android:gravity="top"
         />
 </LinearLayout>

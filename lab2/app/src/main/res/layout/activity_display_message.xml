@@ -18,13 +18,13 @@
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter answer "
+        android:hint="@string/hint_answer"
         android:gravity="top"/>
     <Button
         android:id="@+id/button_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Отправить"
+        android:text="@string/send_answer"
         android:gravity="top"
         />
 </LinearLayout>
