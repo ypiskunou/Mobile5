@@ -17,11 +17,10 @@ import android.widget.Toast;
  *  Добавте разметку для портретного и ландшафтного вида -
  * которые будут применяться при повороте телефона.*/
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     TextView answerView;
     EditText editQuestion;
-    Button btnQuestion;
     final static String EXTRA_QUESTION="EXTRA_QUESTION";
     final int REQUEST_CODE=1;
     Intent intent;
@@ -33,12 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.editQuestion = findViewById(R.id.edit_question);
         this.answerView = findViewById(R.id.given_answer);
-        this.btnQuestion = findViewById(R.id.button_question);
-        this.btnQuestion.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View v) {
+    public void onClickQuestion(View v) {
         this.intent= new Intent(this, DisplayMessageActivity.class);
         this.intent.putExtra(EXTRA_QUESTION, this.editQuestion.getText().toString());
         startActivityForResult(this.intent, REQUEST_CODE);
