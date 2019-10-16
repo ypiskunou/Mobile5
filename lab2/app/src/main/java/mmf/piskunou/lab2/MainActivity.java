@@ -31,17 +31,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editQuestion = findViewById(R.id.edit_question);
-        answerView = findViewById(R.id.given_answer);
-        btnQuestion = findViewById(R.id.button_question);
-        btnQuestion.setOnClickListener(this);
+        this.editQuestion = findViewById(R.id.edit_question);
+        this.answerView = findViewById(R.id.given_answer);
+        this.btnQuestion = findViewById(R.id.button_question);
+        this.btnQuestion.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        intent= new Intent(this, DisplayMessageActivity.class);
-        intent.putExtra(EXTRA_QUESTION, editQuestion.getText().toString());
-        startActivityForResult(intent, REQUEST_CODE);
+        this.intent= new Intent(this, DisplayMessageActivity.class);
+        this.intent.putExtra(EXTRA_QUESTION, this.editQuestion.getText().toString());
+        startActivityForResult(this.intent, REQUEST_CODE);
     }
 
     @Override
@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case REQUEST_CODE:
-                    String given_answer = data.getStringExtra(DisplayMessageActivity.EXTRA_ANSWER);
-                    answerView.setText(given_answer);
+                    String givenAnswer = data.getStringExtra(DisplayMessageActivity.EXTRA_ANSWER);
+                    answerView.setText(givenAnswer);
                     break;
             }
             // если вернулось не ОК

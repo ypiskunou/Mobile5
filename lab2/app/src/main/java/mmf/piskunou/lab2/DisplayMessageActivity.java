@@ -22,17 +22,17 @@ public class DisplayMessageActivity extends AppCompatActivity implements View.On
 
         Intent intent= getIntent();
         String question = intent.getStringExtra(MainActivity.EXTRA_QUESTION);
-        givenQuestion = findViewById(R.id.given_question);
-        givenQuestion.setText(question);
-        editAnswer = findViewById(R.id.editAnswer);
-        btnAnswer = findViewById(R.id.button_answer);
-        btnAnswer.setOnClickListener(this);
+        this.givenQuestion = findViewById(R.id.given_question);
+        this.givenQuestion.setText(question);
+        this.editAnswer = findViewById(R.id.editAnswer);
+        this.btnAnswer = findViewById(R.id.button_answer);
+        this.btnAnswer.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
-        intent.putExtra(EXTRA_ANSWER, editAnswer.getText().toString());
+        intent.putExtra(EXTRA_ANSWER, this.editAnswer.getText().toString());
         setResult(RESULT_OK, intent);
         finish();
 

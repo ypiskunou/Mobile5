@@ -5,5 +5,6 @@
     <string name="hint_answer_field">Ответ</string>
     <string name="send_question">Отправить вопрос</string>
     <string name="send_answer">Отправить ответ</string>
+    <string name="portrait_mode">Портретный режим</string>
     <string name="landscape_mode">Адьбомный режим</string>
 </resources>
