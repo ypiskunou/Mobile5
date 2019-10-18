@@ -13,6 +13,8 @@ public class DisplayMessageActivity extends AppCompatActivity {
     final static String EXTRA_ANSWER="EXTRA_ANSWER";
     EditText editAnswer;
     TextView givenQuestion;
+    String savedEditAnswer;
+    String savedGivenQuestion;
 // коды состояния надо проверять. Интент - с контекстом связанного активити
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,15 @@ public class DisplayMessageActivity extends AppCompatActivity {
         this.givenQuestion = findViewById(R.id.given_question);
         this.givenQuestion.setText(question);
         this.editAnswer = findViewById(R.id.editAnswer);
+
+        if(savedInstanceState != null){
+            savedInstanceState.get(savedEditAnswer);
+            editAnswer.setText(savedEditAnswer);
+        }
+        if(savedInstanceState != null){
+            savedInstanceState.get(savedGivenQuestion);
+            givenQuestion.setText(savedGivenQuestion);
+        }
     }
 
     public void onClickAnswer(View v) {
@@ -32,5 +43,12 @@ public class DisplayMessageActivity extends AppCompatActivity {
         setResult(RESULT_OK, intent);
         finish();
 
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(savedGivenQuestion, givenQuestion.getText().toString());
+        outState.putString(savedEditAnswer, editAnswer.getText().toString());
     }
 }

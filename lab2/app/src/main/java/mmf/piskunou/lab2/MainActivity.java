@@ -2,10 +2,10 @@ package mmf.piskunou.lab2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     TextView answerView;
     EditText editQuestion;
+    String savedAnswerView;
+    String savedEditQuestion;
+
     final static String EXTRA_QUESTION="EXTRA_QUESTION";
     final int REQUEST_CODE=1;
     Intent intent;
@@ -32,12 +35,28 @@ public class MainActivity extends AppCompatActivity {
 
         this.editQuestion = findViewById(R.id.edit_question);
         this.answerView = findViewById(R.id.given_answer);
+
+        if(savedInstanceState != null){
+            savedInstanceState.get(savedEditQuestion);
+            editQuestion.setText(savedEditQuestion);
+        }
+        if(savedInstanceState != null){
+            savedInstanceState.get(savedAnswerView);
+            answerView.setText(savedAnswerView);
+        }
     }
 
     public void onClickQuestion(View v) {
         this.intent= new Intent(this, DisplayMessageActivity.class);
         this.intent.putExtra(EXTRA_QUESTION, this.editQuestion.getText().toString());
         startActivityForResult(this.intent, REQUEST_CODE);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(savedAnswerView, answerView.getText().toString());
+        outState.putString(savedEditQuestion, editQuestion.getText().toString());
     }
 
     @Override
