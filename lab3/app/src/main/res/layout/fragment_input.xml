@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/edit_question"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_question"
+        android:gravity="top"/>
+    <TextView
+        android:id="@+id/given_answer"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:hint="@string/hint_answer_field"/>
+    <Button
+        android:id="@+id/button_question"
+        android:onClick="onClickQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_question"
+        android:gravity="top"
+        />
+</LinearLayout>
