@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">lab3</string>
+    <string name="hint_question">Введите вопрос</string>
+    <string name="hint_answer">Введите ответ</string>
+    <string name="hint_answer_field">Ответ</string>
+    <string name="send_question">Отправить вопрос</string>
+    <string name="send_answer">Отправить ответ</string>
+    <string name="portrait_mode">Портретный режим</string>
+    <string name="landscape_mode">Адьбомный режим</string>
+    <string name="about_application">Лаб 3. Прокурор</string>
+    <string name="are_you_sure">Вы уверены, что хотите закрыть диалог?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="about">О программе</string>
+    <string name="exit">Выход</string>
+</resources>
