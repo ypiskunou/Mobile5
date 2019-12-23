@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab5</string>
+    <string name="input_first_name">Input first name: </string>
+    <string name="input_last_name">Input last name: </string>
+    <string name="input_date">Input date: </string>
+    <string name="search_button">Search a person</string>
+    <string name="insert_button">Insert a person</string>
+</resources>

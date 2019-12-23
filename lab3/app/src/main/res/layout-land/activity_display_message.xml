@@ -6,26 +6,10 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/given_question"
-        android:layout_marginTop="16dp"
+    <fragment
+        android:id="@+id/outputFragment"
+        android:name="mmf.piskunou.lab3.fragment.OutputFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="top"/>
-
-    <EditText
-        android:id="@+id/editAnswer"
-        android:layout_marginTop="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_answer"
-        android:gravity="top"/>
-    <Button
-        android:id="@+id/button_answer"
-        android:onClick="onClickAnswer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/send_answer"
-        android:gravity="top"
-        />
+        android:layout_height="match_parent"
+        android:layout_margin="20dp" />
 </LinearLayout>
