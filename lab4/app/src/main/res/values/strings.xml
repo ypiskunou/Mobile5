@@ -1,16 +1,5 @@
 <resources>
-    <string name="app_name">lab3</string>
-    <string name="hint_question">Enter question</string>
-    <string name="hint_answer">Enter answer</string>
-    <string name="hint_answer_field">Given answer</string>
-    <string name="send_question">Send question</string>
-    <string name="send_answer">Send answer</string>
-    <string name="portrait_mode">Portrait mode</string>
-    <string name="landscape_mode">Landscape mode</string>
-    <string name="about_application">Lab 3. Prosecutor</string>
-    <string name="are_you_sure">Are you sure to close dialog?</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-    <string name="about">About program</string>
-    <string name="exit">Exit</string>
+    <string name="app_name">Task4</string>
+    <string name="enter_number">Enter a number: </string>
+    <string name="button_text">OK</string>
 </resources>

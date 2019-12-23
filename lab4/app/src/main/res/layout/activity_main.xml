@@ -1,14 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <fragment
-        android:id="@+id/inputFragment"
-        android:name="mmf.piskunou.lab4.fragment.InputFragment"
+    <EditText
+        android:id="@+id/inputNumber"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="20dp" />
+        android:layout_height="90dp"
+        style="@style/enteredText"
+        android:hint="@string/enter_number"
+        android:inputType="" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/button"
+        android:text="@string/button_text" />
+
+    <TextView
+        android:id="@+id/receiveAmount"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:freezesText="true"
+        style="@style/receivedText"
+        android:text="" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/receivePrimeNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:freezesText="true"
+            style="@style/receivedText"
+            android:text=""/>
+    </ScrollView>
+
 </LinearLayout>

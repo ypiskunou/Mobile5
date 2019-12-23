@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Задание4</string>
+    <string name="enter_number">Введите число: </string>
+    <string name="button_text">Далее</string>
+</resources>

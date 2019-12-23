@@ -1,82 +1,54 @@
 package mmf.piskunou.lab4;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.content.IntentFilter;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
-
-/**
- * Введите общие стили для элементов управления.
- *  Добавте локализацию - приложение должно поддерживать русский и английский языки,
- * в зависимости от настроек системы.
- *  Добавте разметку для портретного и ландшафтного вида -
- * которые будут применяться при повороте телефона.*/
 
 public class MainActivity extends AppCompatActivity {
-
-    TextView answerView;
-    EditText editQuestion;
-    String savedAnswerView;
-    String savedEditQuestion;
-
-    final static String EXTRA_QUESTION="EXTRA_QUESTION";
-    final int REQUEST_CODE=1;
-    Intent intent;
+    static final String NUMBERS_KEY = "number";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.editQuestion = findViewById(R.id.edit_question);
-        this.answerView = findViewById(R.id.given_answer);
+        final Button button = findViewById(R.id.button);
 
-        if(savedInstanceState != null){
-            savedInstanceState.get(savedEditQuestion);
-            editQuestion.setText(savedEditQuestion);
-        }
-        if(savedInstanceState != null){
-            savedInstanceState.get(savedAnswerView);
-            answerView.setText(savedAnswerView);
-        }
-    }
 
-    public void onClickQuestion(View v) {
-        this.intent= new Intent(this, DisplayMessageActivity.class);
-        this.intent.putExtra(EXTRA_QUESTION, this.editQuestion.getText().toString());
-        startActivityForResult(this.intent, REQUEST_CODE);
-    }
+        LocalBroadcastManager.getInstance(this).registerReceiver(broadcastReceiver, new IntentFilter("MainActivity"));
 
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString(savedAnswerView, answerView.getText().toString());
-        outState.putString(savedEditQuestion, editQuestion.getText().toString());
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        // запишем в лог значения requestCode и resultCode
-        Log.d("myLogs", "requestCode = " + requestCode + ", resultCode = " + resultCode);
-        // если пришло ОК
-        if (resultCode == RESULT_OK) {
-            switch (requestCode) {
-                case REQUEST_CODE:
-                    String givenAnswer = data.getStringExtra(DisplayMessageActivity.EXTRA_ANSWER);
-                    answerView.setText(givenAnswer);
-                    break;
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final EditText inputNumber = findViewById(R.id.inputNumber);
+                int number = Integer.valueOf(inputNumber.getText().toString());
+                Intent intent = new Intent(getApplicationContext(), MainIntentService.class);
+                intent.putExtra(NUMBERS_KEY, number);
+                startService(intent);
+                button.setEnabled(false);
             }
-            // если вернулось не ОК
-        } else {
-            Toast.makeText(this, "Wrong result", Toast.LENGTH_SHORT).show();
-        }
-        if (data == null){
-            System.out.println(" No info returned \n");
-        }
+        });
     }
+
+    BroadcastReceiver broadcastReceiver = new BroadcastReceiver(){
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int amount = intent.getIntExtra(MainIntentService.AMOUNT_KEY, 0);
+            String primeNumbers = intent.getStringExtra(MainIntentService.PRIME_NUMBERS_STRING_KEY);
+            final TextView receiveAmount = findViewById(R.id.receiveAmount);
+            receiveAmount.setText(String.valueOf(amount));
+            final TextView receivePrimeNumbers = findViewById(R.id.receivePrimeNumbers);
+            receivePrimeNumbers.setText(primeNumbers);
+            final Button button = findViewById(R.id.button);
+            button.setEnabled(true);
+        }
+    };
 }
