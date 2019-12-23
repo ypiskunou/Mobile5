@@ -4,10 +4,11 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 
-import com.example.androiddev3.R;
+import mmf.piskunou.lab3.R;
 
-import androidx.fragment.app.DialogFragment;
+;
 
 public class ExitDialog extends DialogFragment {
     @Override

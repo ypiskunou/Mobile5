@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("mmf.piskunou.lab3", appContext.getPackageName());
+        assertEquals("mmf.piskunou.lab2", appContext.getPackageName());
     }
 }

@@ -1,13 +1,12 @@
 package mmf.piskunou.lab3.fragment;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.androiddev3.R;
-
-import androidx.fragment.app.Fragment;
+import mmf.piskunou.lab3.R;
 
 public class InputFragment extends Fragment {
 

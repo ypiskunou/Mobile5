@@ -7,4 +7,10 @@
     <string name="send_answer">Отправить ответ</string>
     <string name="portrait_mode">Портретный режим</string>
     <string name="landscape_mode">Адьбомный режим</string>
+    <string name="about_application">Лаб 3. Прокурор</string>
+    <string name="are_you_sure">Вы уверены, что хотите закрыть диалог?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="about">О программе</string>
+    <string name="exit">Выход</string>
 </resources>
