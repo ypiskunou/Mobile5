@@ -1,0 +1,9 @@
+package mmf.piskunou.weather.domain;
+
+public class LargeCity extends City {
+
+    public LargeCity(String name, double[] temperatures) {
+        super(name);
+        sizeType = CitySize.LARGE;
+    }
+}

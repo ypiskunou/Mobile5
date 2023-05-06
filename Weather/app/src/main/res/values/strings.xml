@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="seasonal_temperature">Average seasonal temperature</string>
+    <string name="city_type">Size of city</string>
+    <string name="cityEditText">Add city</string>
+    <string name="sizeEditText">City size</string>
+    <string name="city_size_small">Small</string>
+    <string name="city_size_medium">Medium</string>
+    <string name="city_size_large">Large</string>
+    <string name="name">Name</string>
+    <string name="add_city">Add city</string>
+    <string name="add_temperature">Add temperature</string>
+    <string name="save_button">Save</string>
+    <string-array name="months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+</resources>
