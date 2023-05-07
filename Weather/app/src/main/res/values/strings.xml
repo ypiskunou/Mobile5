@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="seasonal_temperature">Average seasonal temperature</string>
+    <string name="temperature_text_view">Temperature by Celsium degree</string>
     <string name="city_type">Size of city</string>
-    <string name="cityEditText">Add city</string>
-    <string name="sizeEditText">City size</string>
+    <string name="size_EditText">City size</string>
     <string name="city_size_small">Small</string>
     <string name="city_size_medium">Medium</string>
     <string name="city_size_large">Large</string>

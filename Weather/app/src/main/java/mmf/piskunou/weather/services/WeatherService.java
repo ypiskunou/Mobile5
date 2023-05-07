@@ -1,6 +1,5 @@
 package mmf.piskunou.weather.services;
 
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -8,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.Arrays;
 import java.util.Locale;
 
+import androidx.appcompat.app.AppCompatActivity;
 import mmf.piskunou.weather.R;
 import mmf.piskunou.weather.domain.City;
 import mmf.piskunou.weather.domain.Month;

@@ -30,9 +30,9 @@
         android:id="@+id/temperature_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/textview"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/temperature_text_view"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/season_spinner" />
 
@@ -42,8 +42,18 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="40dp"
-        android:text="@string/citytype"
+        android:text="@string/city_type"
         app:layout_constraintBottom_toTopOf="@+id/city_spinner"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/seasonal_temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/season_spinner" />
 
 </android.support.constraint.ConstraintLayout>

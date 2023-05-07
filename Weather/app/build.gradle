@@ -3,6 +3,14 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
+    packagingOptions {
+        exclude 'META-INF/*'
+        pickFirst '**/androidx.legacy_legacy-support-core-utils.version'
+        pickFirst '**/androidx.vectordrawable_vectordrawable.version'
+        pickFirst '**/androidx.loader_loader.version'
+        pickFirst '**/androidx.localbroadcastmanager_localbroadcastmanager.version'
+        pickFirst '**/androidx.appcompat_appcompat.version'
+    }
     defaultConfig {
         applicationId "mmf.piskunou.weather"
         minSdkVersion 23
