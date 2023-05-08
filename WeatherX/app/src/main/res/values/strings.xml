@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">WeatherX</string>
+    <string name="city_textview">City name</string>
+    <string name="season_textview">Season</string>
+    <string name="temperature_textView">Temperature in Celsium</string>
+    <string name="city_type_textView">City size</string>
+    <string name="edit_Item">Edit</string>
+    <string name="back_arrow">Back to main</string>
+    <string name="city_name">City name</string>
+    <string name="month_temperature">Month temperature in Celsium</string>
+    <string name="month_textview">Month</string>
+    <string name="month_temperature_textview">Temperature in Celsium</string>
+    <string name="city_size_small">Small city</string>
+    <string name="city_size_medium">Medium City</string>
+    <string name="city_size_large">Large city</string>
+    <string name="save_button">Save</string>
+    <string-array name="months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+</resources>
