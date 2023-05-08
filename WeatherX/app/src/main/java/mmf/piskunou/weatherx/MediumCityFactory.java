@@ -1,7 +1,7 @@
 package mmf.piskunou.weatherx;
 
-import mmf.piskunou.weather.domain.City;
-import mmf.piskunou.weather.domain.MediumCity;
+import mmf.piskunou.weatherx.domain.City;
+import mmf.piskunou.weatherx.domain.MediumCity;
 
 public class MediumCityFactory implements CityFactory {
 

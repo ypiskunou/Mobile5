@@ -1,7 +1,7 @@
 package mmf.piskunou.weatherx;
 
-import mmf.piskunou.weather.domain.City;
-import mmf.piskunou.weather.domain.SmallCity;
+import mmf.piskunou.weatherx.domain.City;
+import mmf.piskunou.weatherx.domain.SmallCity;
 
 public class SmallCityFactory implements CityFactory {
     @Override
